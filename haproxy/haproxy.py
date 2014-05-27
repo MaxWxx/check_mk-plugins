@@ -73,6 +73,9 @@ def run_checks(servers):
                     alert_crit = True
                 elif server['status'] == "OPEN":
                     output += "status OPEN"
+                else :
+                    output += "status " + server['status']
+                    alert_warn = True
                 # Add more status options here
     
             # Generic check for the other fields which are numeric
